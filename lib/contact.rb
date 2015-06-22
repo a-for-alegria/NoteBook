@@ -14,3 +14,7 @@ ActiveRecord::Base.establish_connection(
 
 class Note < ActiveRecord::Base
 end
+
+get '/' do
+  haml :index, :layout => false
+end
