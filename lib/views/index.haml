@@ -1,6 +1,13 @@
 !!!
 %html
   %head
-    %title Note book
+    %meta{:charset => "utf-8"}/
+    %title Clients statistics
+    %link{:href => "style.css", :rel => "stylesheet"}/
   %body
-    %h1 Hey, partner!
+    %form{action: "/", method: "POST"}
+      %input{type:"text", name: "client[client_name]"}
+      %input.button{type: "submit", value: "Add client"}
+    %ul
+      - @clients.each do  |client|
+        %li #{client.client_name}

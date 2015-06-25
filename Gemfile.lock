@@ -34,6 +34,7 @@ GEM
     sinatra-activerecord (2.0.6)
       activerecord (>= 3.2)
       sinatra (~> 1.0)
+    sinatra-formhelpers-ng (1.9.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
     tzinfo (1.2.2)
@@ -49,3 +50,4 @@ DEPENDENCIES
   puma
   sinatra
   sinatra-activerecord
+  sinatra-formhelpers-ng

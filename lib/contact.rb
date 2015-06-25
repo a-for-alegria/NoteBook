@@ -12,9 +12,15 @@ ActiveRecord::Base.establish_connection(
   :encoding => 'utf8'
 )
 
-class Note < ActiveRecord::Base
+class Client < ActiveRecord::Base
 end
 
-get '/' do
-  haml :index, :layout => false
+get '/' do 
+	@clients = Client.all
+  haml :index
+end
+
+post '/' do
+  Client.create(params[:client])
+  redirect to('/')
 end
