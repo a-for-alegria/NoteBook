@@ -1,4 +1,5 @@
 
+
 .sidebar {
 	width: 20%;
 	height: 92.5%;
@@ -10,4 +11,18 @@
 	width: 80%;
 	height: 92.5%;
 	float: right;
+	h1 {text-align: center;}
+	overflow: scroll;
+}
+
+.container-clients {
+  margin-bottom: 2px;
+  li {
+  	padding: 10px;
+  }
+}
+
+.clients {
+	font-size: 1.5em;
+	background-color: green;
 }
