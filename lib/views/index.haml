@@ -5,15 +5,19 @@
     %title Clients statistics
     %link{:href => "/stylesheets/main.css", :rel => "stylesheet", :type => "text/css"}/
   %body
-    %form{action: "/", method: "POST"}
-      %input{type:"text", name: "client[client_name]"}
-      %input.button{type: "submit", value: "Add client"}
-  %header
-    .header-inner
-      %span.logo DSmith  
-    %h1 Clients list
-    %ul
-      - @clients.each do  |client|
-        %li #{client.client_name}
+    %header
+      .header-inner
+        .container
+          %span.logo DSmith    
+    .sidebar
+      .container
+        %form{action: "/", method: "POST"}
+          %input{type:"text", name: "client[client_name]"}
+          %input.button{type: "submit", value: "Add client"}
+    .content-index
+      %h1 Clients list
+      %ul
+        - @clients.each do  |client|
+          %li #{client.client_name}
 
 
