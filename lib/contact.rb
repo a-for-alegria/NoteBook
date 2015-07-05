@@ -13,6 +13,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 class Client < ActiveRecord::Base
+	validates :client_name, presence: true, length: {minimum: 5}
 end
 
 get '/' do 
