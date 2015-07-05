@@ -16,10 +16,4 @@
           %input{type: "submit", value: "Add client"}
     .content-index
       .container
-        %ul
-          - @clients.each do  |client|
-            .container-clients
-              %li.clients 
-                %a{href: "/clients/#{client.id}"} #{client.client_name}
-
-
+        %h2 #{@client.client_name}

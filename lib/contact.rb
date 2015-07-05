@@ -24,3 +24,8 @@ post '/' do
   Client.create(params[:client])
   redirect to('/')
 end
+
+get "/clients/:id" do
+  @client = Client.find(params[:id])
+  haml :client
+end
