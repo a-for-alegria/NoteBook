@@ -15,14 +15,14 @@
 	overflow: scroll;
 }
 
-.container-clients {
-  margin-bottom: 2px;
-  li {
-  	padding: 10px;
-  }
-}
-
 .clients {
+	background-color: green;
+	display: block;
+	padding: 10px;
+	width: 100%;
 	font-size: 1.5em;
-	border: 2px solid green;
+	margin-bottom: 2px;
+	&:hover {
+		background-color: darken(green, 5%);
+	}
 }

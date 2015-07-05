@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Clients statistics
+    %link{:href => "/stylesheets/main.css", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    %header
+      .header-inner
+        .container
+          %a.logo{href: '/'} DSmith    
+    .sidebar
+      .container
+        %form{action: "/", method: "POST"}
+          %input{type:"text", name: "client[client_name]"}
+          %input{type: "submit", value: "Add client"}
+    .content-index
+      .container
+        = yield
