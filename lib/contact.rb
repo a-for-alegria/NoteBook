@@ -30,3 +30,8 @@ get "/clients/:id" do
   @client = Client.find(params[:id])
   haml :client
 end
+
+delete '/delete/clients/:id' do
+  Client.find(params[:id]).destroy
+  redirect to('/')
+end
