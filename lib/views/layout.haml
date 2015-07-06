@@ -12,7 +12,8 @@
     .sidebar
       .container
         %form{action: "/", method: "POST"}
-          %input{type:"text", name: "client[client_name]"}
+          %input{type:"text", name: "client[client_name]", placeholder: "Client name"}
+          %input{type:"text", name: "client[budget]", placeholder: "Budget"}
           %input{type: "submit", value: "Add client"}
         %h2 Clients: #{Client.count}
     .content-index
