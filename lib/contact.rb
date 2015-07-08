@@ -19,6 +19,7 @@ end
 
 get '/' do 
 	@clients = Client.all
+  @clients_sum_budget = Client.all.pluck(:budget).sum
   haml :index
 end
 

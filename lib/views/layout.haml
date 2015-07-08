@@ -16,6 +16,7 @@
           %input{type:"text", name: "client[budget]", placeholder: "Budget"}
           %input{type: "submit", value: "Add client"}
         %h2 Clients: #{Client.count}
+        %span #{Client.all.pluck(:budget).sum}
     .content-index
       .container
         = yield
