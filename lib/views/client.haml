@@ -1,2 +1,9 @@
 %h2 #{@client.client_name}
-%span #{@client.budget}
+.show-info-block	
+  %ul
+    %li.client-char
+      %span Budget: 
+      #{@client.budget}
+    %li.client-char
+      %span Project: 
+      #{@client.project}

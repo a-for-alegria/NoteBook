@@ -32,6 +32,7 @@ h1 {
 
 h2 {
   font-size: 1.7em;
+  margin-bottom: 5px;
 }
 
 h3 {
@@ -46,6 +47,13 @@ header {
 	width: 100%;
 	background-color: lighten(#000000, 20%);
 	height: 7.5%;
+}
+
+.sidebar {
+	width: 20%;
+	height: 92.5%;
+	background-color: darken(#ffffff, 20%);
+	float: left;
 }
 
 .container {

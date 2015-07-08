@@ -2,7 +2,7 @@
   - @clients.each do  |client|
     .container-clients
       %li
-        %a.clients{href: "/clients/#{client.id}"} #{client.client_name} +#{client.budget}
+        %a.clients{href: "/clients/#{client.id}"} #{client.client_name}
         %span 
         %form.destroy{action: "/delete/clients/#{client.id}", method: "POST"}
           %input{type: "hidden", name: "_method", value: "DELETE"}
