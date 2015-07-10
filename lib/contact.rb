@@ -23,9 +23,17 @@ get '/' do
   haml :index
 end
 
-post '/' do
-  Client.create(params[:client])
-  redirect to('/')
+get '/clients/new' do
+  haml :client_form
+end
+
+post '/clients/new' do
+  @client = Client.create(params[:client])
+  if @client.save  
+    redirect to('/')
+  else
+    redirect to('/clients/new')
+  end
 end
 
 get "/clients/:id" do

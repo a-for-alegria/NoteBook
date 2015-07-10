@@ -11,12 +11,7 @@
           %a.logo{href: '/'} DSmith    
     .sidebar
       .container
-        %form{action: "/", method: "POST"}
-          %input{type:"text", name: "client[client_name]", placeholder: "Client name"}
-          %input{type:"text", name: "client[project]", placeholder: "Project"}
-          %input{type:"text", name: "client[budget]", placeholder: "Budget"}
-          %br
-          %input{type: "submit", value: "Add client"}
+        %a{href: '/clients/new'} Add client
         %h2 Clients: #{Client.count}
         %span #{Client.all.pluck(:budget).sum}
     .content-index

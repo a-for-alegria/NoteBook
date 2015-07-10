@@ -1,0 +1,7 @@
+.form-container
+	%form{action: "/clients/new", method: "POST"}
+	  %input{type:"text", name: "client[client_name]", placeholder: "Client name"}
+	  %input{type:"text", name: "client[project]", placeholder: "Project"}
+	  %input{type:"text", name: "client[budget]", placeholder: "Budget"}
+	  %br
+	  %input{type: "submit", value: "Add client"}
