@@ -2,11 +2,7 @@
 .show-info-block	
   %ul
     %li.client-char
-      %span Budget: 
-      #{@client.budget}
     %li.client-char
-      %span Project: 
-      #{@client.project}
     %form.destroy{action: "/delete/clients/#{@client.id}", method: "POST"}
       %input{type: "hidden", name: "_method", value: "DELETE"}
       %input{type: "submit", value: "delete"}  

@@ -14,12 +14,10 @@ ActiveRecord::Base.establish_connection(
 
 class Client < ActiveRecord::Base
 	validates :client_name, presence: true, length: {minimum: 5}
-  validates :budget, presence: true, length: {minimum: 3}
 end
 
 get '/' do 
 	@clients = Client.all
-  @clients_sum_budget = Client.all.pluck(:budget).sum
   haml :index
 end
 
