@@ -8,11 +8,14 @@
     %header
       .header-inner
         .container
-          %a.logo{href: '/'} DSmith    
+          %a.logo{href: '/'} DSmith
+          %ul.counter
+            %li Clients: #{Client.count}
     .sidebar
+      %ul
+        %li
+          %a{href: '/clients/new'} Add client
       .container
-        %a{href: '/clients/new'} Add client
-        %h2 Clients: #{Client.count}
     .content-index
       .container
         = yield

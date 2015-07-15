@@ -1,8 +1,7 @@
 %h2 #{@client.client_name}
 .show-info-block	
   %ul
-    %li.client-char
-    %li.client-char
-    %form.destroy{action: "/delete/clients/#{@client.id}", method: "POST"}
-      %input{type: "hidden", name: "_method", value: "DELETE"}
-      %input{type: "submit", value: "delete"}  
+    %li.client-char #{@client.email}
+  %form.destroy{action: "/delete/clients/#{@client.id}", method: "POST"}
+    %input{type: "hidden", name: "_method", value: "DELETE"}
+    %input{type: "submit", value: "delete"}  
