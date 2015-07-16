@@ -22,6 +22,8 @@ class Project < ActiveRecord::Base
   validates :project_name, presence: true
 end
 
+#---------------Global handlers-----#
+
 get '/' do 
   haml :index
 end
@@ -48,7 +50,7 @@ end
 
 get "/projects/:id" do
   @project = Project.find(params[:id])
-  haml :project
+  haml :project_show
 end
 
 delete '/delete/clients/:id' do
@@ -80,7 +82,7 @@ end
 
 get "/clients/:id" do
   @client = Client.find(params[:id])
-  haml :client
+  haml :client_show
 end
 
 delete '/delete/clients/:id' do

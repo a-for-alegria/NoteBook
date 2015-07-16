@@ -1,6 +1,6 @@
 %h2 Projects list
 %ul
   - @projects.each do  |project|
-    .container-projects
+    .main-list
       %li
-        %a.projects{href: "/projects/#{project.id}"} #{project.project_name}
+        %a.main-list-element{href: "/projects/#{project.id}"} #{project.project_name}

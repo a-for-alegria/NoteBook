@@ -1,6 +1,7 @@
 @import 'index.scss';
 @import 'forms.scss';
-@import 'client_show.scss';
+@import 'clients.scss';
+@import 'projects.scss';
 
 /*------------ CSS reset ------------*/
 * {
@@ -109,6 +110,7 @@ a {
   	padding: 10px;
   	font-weight: bold;
   	background-color: darken(#ffffff, 30%);
+  	border-bottom: 2px solid darken(#ffffff, 40%);
   	&:hover{
   		color: lighten(#000000, 10%);
   		background-color: darken(#ffffff, 35%);
