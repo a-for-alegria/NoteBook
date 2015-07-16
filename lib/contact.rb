@@ -42,7 +42,7 @@ end
 post '/projects/new' do
   @project = Project.create(params[:project])
   if @project.save  
-    redirect to('/')
+    redirect to('/projects')
   else
     redirect to('/projects/new')
   end
@@ -55,7 +55,7 @@ end
 
 delete '/delete/clients/:id' do
   Project.find(params[:id]).destroy
-  redirect to('/')
+  redirect to('/projects')
 end
 
 
@@ -74,7 +74,7 @@ end
 post '/clients/new' do
   @client = Client.create(params[:client])
   if @client.save  
-    redirect to('/')
+    redirect to('/clients')
   else
     redirect to('/clients/new')
   end
@@ -87,6 +87,6 @@ end
 
 delete '/delete/clients/:id' do
   Client.find(params[:id]).destroy
-  redirect to('/')
+  redirect to('/clients')
 end
 

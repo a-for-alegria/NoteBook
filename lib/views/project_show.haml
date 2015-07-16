@@ -1,7 +1,7 @@
 %h2 #{@project.project_name}
 .show-info-block	
   %ul
-    %li.project-char #{@project.email}
-  %form.destroy{action: "/delete/clients/#{@project.id}", method: "POST"}
+    %li.project-char 
+  %form.destroy{action: "/delete/projects/#{@project.id}", method: "POST"}
     %input{type: "hidden", name: "_method", value: "DELETE"}
     %input{type: "submit", value: "delete"}  
