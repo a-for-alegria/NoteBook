@@ -18,9 +18,51 @@ class Client < ActiveRecord::Base
   validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}
 end
 
+class Project < ActiveRecord::Base
+  validates :project_name, presence: true
+end
+
 get '/' do 
-	@clients = Client.all
   haml :index
+end
+
+#---------------Projects handlers-----#
+
+get '/projects' do 
+  @projects = Project.all
+  haml :projects
+end
+
+get '/projects/new' do
+  haml :project_form
+end
+
+post '/projects/new' do
+  @project = Project.create(params[:project])
+  if @project.save  
+    redirect to('/')
+  else
+    redirect to('/projects/new')
+  end
+end
+
+get "/projects/:id" do
+  @project = Project.find(params[:id])
+  haml :project
+end
+
+delete '/delete/clients/:id' do
+  Project.find(params[:id]).destroy
+  redirect to('/')
+end
+
+
+#---------------Clients handler-----#
+
+get '/clients' do 
+  @clients = Client.all
+  @projects = Project.all
+  haml :clients
 end
 
 get '/clients/new' do
@@ -45,3 +87,4 @@ delete '/delete/clients/:id' do
   Client.find(params[:id]).destroy
   redirect to('/')
 end
+

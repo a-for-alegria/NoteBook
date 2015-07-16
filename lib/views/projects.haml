@@ -1,0 +1,6 @@
+%h2 Projects list
+%ul
+  - @projects.each do  |project|
+    .container-projects
+      %li
+        %a.projects{href: "/projects/#{project.id}"} #{project.project_name}
