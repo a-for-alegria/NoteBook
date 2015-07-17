@@ -34,6 +34,7 @@ h1 {
 h2 {
   font-size: 1.7em;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 h3 {
@@ -48,6 +49,13 @@ header {
 	width: 100%;
 	background-color: lighten(#000000, 20%);
 	height: 7.5%;
+}
+
+.content-index {
+	width: 80%;
+	height: 92.5%;
+	float: right;
+	overflow: scroll; 
 }
 
 .container {
@@ -104,5 +112,30 @@ a {
   }
 }
 
+/*------------ Client-Project mutual styles ------------*/
 
+.main-list {
+  li {
+  	position: relative;
+  }
+}
 
+.main-list-element {
+	background-color: darken(#ffffff, 10%);
+	display: inline-block;
+	padding: 10px;
+	width: 100%;
+	font-size: 1.5em;
+	margin-bottom: 2px;
+	border: 2px solid darken(#ffffff, 15%);
+	&:hover {
+		background-color: darken(#ffffff, 15%);
+	}
+}
+
+.show-info-block	{
+	padding: 5px;
+	li {
+		font-size: 1.2em;
+	}
+}
