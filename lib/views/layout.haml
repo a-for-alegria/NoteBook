@@ -9,15 +9,12 @@
       .header-inner
         .container
           %a.logo{href: '/'} DSmith
-          %ul.counter
-            %li Clients: #{Client.count}
-            %li Projects: #{Project.count}
     .sidebar
       %ul
         %li
-          %a{href: '/projects'} Projects
+          %a{href: '/projects'} Projects (#{Project.count})
         %li
-          %a{href: '/clients'} Clients
+          %a{href: '/clients'} Clients (#{Client.count})
         %li
           %a{href: '/clients/new'} Add client
         %li

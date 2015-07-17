@@ -53,7 +53,7 @@ get "/projects/:id" do
   haml :project_show
 end
 
-delete '/delete/clients/:id' do
+delete '/delete/projects/:id' do
   Project.find(params[:id]).destroy
   redirect to('/projects')
 end

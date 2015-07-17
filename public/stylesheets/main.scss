@@ -84,20 +84,6 @@ a {
 	position: relative;
 }
 
-.counter {
-	float: right;
-	position: relative;
-	top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  li {
-  	display: inline;
-  	margin-right: 10px;
-  	color: #ffffff;
-  }
-}
-
 /*------------ Sidebar styles ------------*/
 
 .sidebar {
