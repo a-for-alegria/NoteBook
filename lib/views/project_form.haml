@@ -1,5 +1,12 @@
 .form-client
   %form{action: "/projects/new", method: "POST"}
     %input{type:"text", name: "project[project_name]", placeholder: "Project name"}
+    %select{name: "project[owner]", prompt: "Select client"} 
+      Assign client
+      - @clients.map(&:client_name).each do |name|
+        %option{name: name, value: name}="#{name}"
     %br
     %input{type: "submit", value: "Add project"}
+
+
+    / =f.select(:client_project, @projects.map(&:project_name), {, class: "selectpicker"}

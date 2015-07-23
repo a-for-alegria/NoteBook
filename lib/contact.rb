@@ -36,6 +36,7 @@ get '/projects' do
 end
 
 get '/projects/new' do
+  @clients = Client.all
   haml :project_form
 end
 
