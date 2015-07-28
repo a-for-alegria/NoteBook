@@ -54,10 +54,25 @@ get "/projects/:id" do
   haml :project_show
 end
 
+get "/archived_projects" do
+  @archived_projects = Project.where(archived: true)
+  haml :archived_projects
+end
+
 delete '/delete/projects/:id' do
   Project.find(params[:id]).destroy
   redirect to('/projects')
 end
+
+# post '/archive/projects/:id' do
+#   Project.find(params[:id]).toggle(:archived)
+#   redirect to("/projects")
+# end
+
+# post '/restore/projects/:id' do
+#   Project.find(params[:id]).toggle(:archived)
+#   redirect to("/projects")
+# end
 
 
 #---------------Clients handler-----#
