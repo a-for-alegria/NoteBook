@@ -31,7 +31,7 @@ end
 #---------------Projects handlers-----#
 
 get '/projects' do 
-  @projects = Project.all
+  @projects = Project.where(archived: false)
   haml :projects
 end
 
@@ -64,7 +64,7 @@ delete '/delete/projects/:id' do
   redirect to('/projects')
 end
 
-# post '/archive/projects/:id' do
+# post '/archived_projects/:id' do
 #   Project.find(params[:id]).toggle(:archived)
 #   redirect to("/projects")
 # end

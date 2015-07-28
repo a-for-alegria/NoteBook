@@ -12,9 +12,9 @@
     .sidebar
       %ul
         %li
-          %a{href: '/projects'} Projects (#{Project.count})
+          %a{href: '/projects'} Projects (#{Project.where(archived: false).count})
         %li
-          %a{href: '/archived_projects'} Archived projects
+          %a{href: '/archived_projects'} Archived projects (#{Project.where(archived: true).count})
         %li
           %a{href: '/clients'} Clients (#{Client.count})
         %li

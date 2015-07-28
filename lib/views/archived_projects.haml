@@ -1,4 +1,5 @@
 %h2 Archived projects
-- @archived_projects.each do |pr|
+- @archived_projects.each do |project|
   %ul
-    %li #{pr.project_name}
+    %li  
+      %a.main-list-element{href: "/projects/#{project.id}"} #{project.project_name}
